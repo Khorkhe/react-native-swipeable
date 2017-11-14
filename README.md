@@ -1,5 +1,15 @@
 # React Native Swipeable [![NPM version][npm-image]][npm-url]
 
+--------------------------------------------------------------------------------
+Fork modifications:
+
+ - slight improvement in swipe detection: motion does not need to be perfectly horizontal. still not perfect though
+ - slight improvement to flashing buttons: when buttons are visible, a touch on the Swipeable element causes buttons to double in width for a fraction of a second. flashing still occurs, but much more occasionally
+
+fixes are far from perfect; source repo had no comments whatsoever.
+
+--------------------------------------------------------------------------------
+
 A powerful React Native swipe component.  Supports both iOS and Android.
 
 <img src="https://raw.githubusercontent.com/jshanson7/react-native-swipeable/master/demo.gif" width="310">
