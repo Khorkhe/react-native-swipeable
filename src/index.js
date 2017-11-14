@@ -214,7 +214,7 @@ export default class Swipeable extends PureComponent {
     const {lastOffset, pan} = this.state;
 
     pan.setOffset(lastOffset);
-    this.props.onSwipeStart(event, gestureState, this);
+    // this.props.onSwipeStart(event, gestureState, this);
   };
 
   _handlePanResponderMove = (event, gestureState) => {
@@ -418,6 +418,7 @@ export default class Swipeable extends PureComponent {
   };
 
   _panResponder = PanResponder.create({
+    onStartShouldSetPanResponder: (evt, gestureState) => true,
     onMoveShouldSetPanResponder: this._handleMoveShouldSetPanResponder,
     onMoveShouldSetPanResponderCapture: this._handleMoveShouldSetPanResponder,
     onPanResponderGrant: this._handlePanResponderStart,
